@@ -1,0 +1,10 @@
+[
+    {
+        "monthBasic": "$19.99",
+        "monthPro": "$24.99",
+        "monthMaster": "$39.99",
+        "annuBasic": "$199.99",
+        "annuPro": "$249.99",
+        "annuMaster": "$399.99"
+    }
+]

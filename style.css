@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Space+Mono&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color:hsl(240, 3%, 93%);
+    /* position: relative; */
+}
+
+/* css for toggel */
+.toggel {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    position: relative;
+    left: 42%;
+    color: rgb(78, 78, 78);
+    font-size: large;
+    font-weight: bold;
+}
+.toggel label {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+        /* The switch - the box around the slider */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+/* end of css for toggel */
+
+.content-area  {
+    height: 80vh;
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 2px solid black;
+    background-color: hsl(240, 78%, 98%);
+    background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: right top, left bottom;
+}
+
+.containers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 4vh;
+    border-radius: 100px;
+}
+.content-area h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: hsl(235, 8%, 33%);
+}
+.content-area .container-box {
+    width: 200px;
+    /* height: 300px; */
+    /* border-radius: 10px; */
+    background-color: white;
+    align-self: center;
+}
+.container-box ul{
+    list-style-type: none;
+    text-align: center;
+    margin: 5px;
+    padding: 5px; 
+}
+.container-box li {
+    border-bottom: 1px solid gray;
+    font-weight: 600;
+    color: gray;
+    padding: 10px;
+
+}
+ul > li:last-child,
+ul > li:first-child  {
+    border: none;
+}
+
+.container-box .type {
+    font-weight: 600;
+    color: hsl(233, 13%, 49%);
+}
+.container-box .price {
+    font-size: 40px;
+    font-weight: 800;
+    color: hsl(232, 13%, 33%);
+}
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    display: block;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin-top: 5px;
+    color: white;
+    background-color: hsl(232, 69%, 69%);
+    /* transition: 0.3s; */
+}
+
+.container-box :hover li{
+    color: white;
+    transform: none;
+}
+.container-box :hover a {
+    color: hsl(232, 69%, 69%);
+    background-color: white;
+}
+
+.divBody {
+    transition: 0.2s;
+}
+.divBody :hover {
+    background-color:hsl(232, 69%, 69%);
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+
+@media only screen and (max-width : 640px){
+    .containers {
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        margin-top: 40px;
+        border-radius: 10px;
+    }
+    .container-box {
+        margin: 10px 10px;
+        padding: 10px;
+    }
+    .content-area {
+        height: auto;
+    }
+}

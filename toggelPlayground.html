@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        span {
+            border: 2px solid red;
+            position: absolute;
+            width: 70vw;
+            height: 40vh;
+            background-color: black;
+            color: white;
+            padding: 20px;
+
+        }
+
+        label {
+            color: red;
+            border: 3px solid white;
+            padding: 10px;
+            display: block;
+            height: 10%;
+            width: 10%;
+            background-color: tomato;
+            border-radius: 10px;
+            /* position: relative; */
+        }
+    </style>
+
+
+    <span onclick=func() id="span">hi................
+
+        <label id="labelID" for="checbox"> blue
+        </label>
+        <input type="checkbox" id="checkbox">
+
+    </span>
+
+    <script>
+        const func = () => {
+            labelID.style = 0
+            // alert(span.innerText = 'wow')
+            // alert(checkbox.checked)
+            if (!checkbox.checked) {
+                checkbox.checked = true
+            }
+            else {
+                checkbox.checked = false
+            }
+        }
+    </script>
+</body>
+
+</html>
